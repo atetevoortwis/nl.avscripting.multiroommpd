@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabLibrary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:isScrollContainer="true">
+		<LinearLayout
+		    android:id="@+id/tab1buttons"
+		    android:layout_width="match_parent"
+		    android:layout_height="38dp"
+		    android:orientation="horizontal" >
+			<Button
+			    android:id="@+id/btnStream"
+			    android:layout_width="wrap_content"
+			    android:layout_height="38dp"
+			    android:text="Stream"
+			    android:visibility="visible"
+				android:onClick="onBtnStreamClick" /> 
+			<Button
+			    android:id="@+id/btnBack"
+			    android:layout_width="wrap_content"
+			    android:layout_height="38dp"
+			    android:text="Back" android:visibility="visible"
+			    android:onClick="onBtnBackClick" />
+			<Button
+			    android:id="@+id/btnFullAlbum"
+			    android:layout_width="wrap_content"
+			    android:layout_height="38dp"
+			    android:text="Full album" android:visibility="visible"/>
+		</LinearLayout>		
+	    <ListView
+	        android:id="@+id/listViewLibrary"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1" android:isScrollContainer="true" android:fastScrollEnabled="true" android:hapticFeedbackEnabled="true" android:longClickable="true">
+	    </ListView>
+	    <EditText
+	        android:id="@+id/editTextFilterLibrary"
+	        android:layout_width="match_parent"
+	        android:hint="Filter..." android:layout_height="wrap_content"/>
+	</LinearLayout>
+

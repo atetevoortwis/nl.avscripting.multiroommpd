@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.gesture.GestureOverlayView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gestures"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:gestureStrokeType="multiple"
+    android:eventsInterceptionEnabled="true"
+    android:orientation="vertical">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:id="@+id/cont"
+	    android:layout_width="fill_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical" >
+	
+	    <TabHost
+	        android:id="@android:id/tabhost"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" >
+	
+	        <LinearLayout
+	            android:id="@+id/linearLayout1"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:orientation="vertical" >
+	
+	            <TabWidget
+	                android:id="@android:id/tabs"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content" >
+	            </TabWidget>
+	
+	            <FrameLayout
+	                android:id="@android:id/tabcontent"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent" android:isScrollContainer="true">
+	
+	                <include layout="@layout/tab_library"/>
+	                <include layout="@layout/tab_playlist"/>
+					<include layout="@layout/tab_rooms"/>
+	               	<include layout="@layout/tab_controls"/>
+	                
+	            </FrameLayout>
+	        </LinearLayout>
+	    </TabHost>
+	</LinearLayout>
+</android.gesture.GestureOverlayView>
